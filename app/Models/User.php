@@ -23,4 +23,9 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function user_role()
+    {
+        return $this->hasOne(UserRole::class,'user_id','id');
+    }
 }
