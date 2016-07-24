@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class UserRole extends Model
 {
-    protected$guarded = [];
+    protected $guarded = [];
+    protected $table = 'user_role';
 
     public function role()
     {

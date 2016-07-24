@@ -33,7 +33,11 @@ class AuthController extends Controller
 
     public function user_home()
     {
-        
+        if(Auth::user()->has_role('admin')){
+            return redirect()->action('Admin\DashboardController@get_index');
+        }elseif(Auth::user()->has_role('user')){
+            return redirect()->action('User\UserController@get_index');
+        }
     }
 
     public function get_logout()
