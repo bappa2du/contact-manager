@@ -7,6 +7,7 @@ use App\Models\User;
 
 Route::group(['prefix'=>'user'],function(){
 	Route::controller('dashboard','User\UserController');
+	Route::controller('contact','User\ContactController');
 });
 
 Route::group(['prefix'=>'super-admin'],function(){

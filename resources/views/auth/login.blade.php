@@ -9,6 +9,11 @@
         <link rel="stylesheet" href="assets/user/assets/css/main.css" />
         <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
         <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <style>
+            .lg{
+                padding: 10px 200px;
+            }
+        </style>
     </head>
     <body>
 
@@ -19,7 +24,7 @@
 
                 <!-- Contact -->
                     <section id="contact" class="four">
-                        <div class="container">
+                        <div class="container lg">
 
                             <header>
                                 <h2>Login</h2>
