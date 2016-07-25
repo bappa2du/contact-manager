@@ -12,9 +12,10 @@
 					<thead>
 						<tr>
 							<th>SL</th>
-							<th>User Name</th>
-							<th>User Email</th>
-							<th>User Status</th>
+							<th>Name</th>
+							<th>Email</th>
+							<th>Status</th>
+							<th>Role</th>
 							<th>Action</th>
 						</tr>
 					</thead>
@@ -24,7 +25,8 @@
 								<td>{{$k+1}}</td>
 								<td>{{$user->name}}</td>
 								<td>{{$user->mobile}}</td>
-								<td>{{$user->status}}</td>
+								<td>{!! h_status($user->status)!!}</td>
+								<td>{{$user->user_role->role->role_name}}</td>
 								<td>
 									<div class="btn-group">
 										<a href="" class="btn btn-sm btn-info"><i class="fa fa-pencil"></i></a>
