@@ -1,1 +1,2 @@
-### Contact Manage by Laravel 5.2
+# contact-manager
+A simple contact manager for extensive work by Laravel 5.2
