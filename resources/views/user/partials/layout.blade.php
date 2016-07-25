@@ -9,6 +9,17 @@
         <link rel="stylesheet" href="assets/user/assets/css/main.css" />
         <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
         <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+        <style>
+            #main > section {
+                padding: 1em 0;
+            }
+            form .form-control{
+                padding: 7px !important;
+            }
+            form button{
+                line-height: 1em !important;
+            }
+        </style>
     </head>
     <body>
 

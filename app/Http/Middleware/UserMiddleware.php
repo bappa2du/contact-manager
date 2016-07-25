@@ -16,7 +16,7 @@ class UserMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if(!(Auth::check() && Auth::user()->has_role('admin'))){
+        if(!(Auth::check() && Auth::user()->has_role('user'))){
             return redirect()->guest('/');
         }
         return $next($request);

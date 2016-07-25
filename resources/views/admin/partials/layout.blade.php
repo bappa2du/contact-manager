@@ -16,9 +16,7 @@
                     <aside class="right-side">
                 <!-- Main content -->
                @yield('content')
-                <div class="footer-main">
-                    Contact Manage, 2016
-                </div>
+                
             </aside><!-- /.right-side -->
         </div><!-- ./wrapper -->
         @section('script')

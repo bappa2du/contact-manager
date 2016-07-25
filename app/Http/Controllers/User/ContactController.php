@@ -15,4 +15,9 @@ class ContactController extends Controller
     	return view('user.contact.index')
     		->with('contacts');
     }
+
+    public function get_create()
+    {
+    	return view('user.contact.create');
+    }
 }
