@@ -6,12 +6,18 @@ use App\Models\User;
 
 
 Route::group(['prefix'=>'user'],function(){
-	Route::controller('dashboard','User\UserController');
-	Route::controller('contact','User\ContactController');
+	Route::group(['middleware'=>'user'],function(){
+		Route::controller('dashboard','User\UserController');
+		Route::controller('contact','User\ContactController');
+	});
 });
 
 Route::group(['prefix'=>'super-admin'],function(){
-	Route::controller('dashboard','Admin\DashboardController');
+	Route::group(['middleware'=>'admin'],function(){
+		Route::controller('dashboard','Admin\DashboardController');
+		Route::controller('user','Admin\UserController');
+		Route::controller('contact','Admin\ContactController');
+	});
 });
 
 Route::controller('auth','AuthController');

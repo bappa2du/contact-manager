@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UserRepository
 {
@@ -25,6 +26,18 @@ class UserRepository
 				return true;
 			}
 			return false;
+		}
+		return false;
+	}
+
+	public function update_password($password)
+	{
+		$user_id = Auth::user()->id;
+		$user = User::find($user_id);
+		if(Hash::check($password,$user->password)){
+			$user->password = bcrypt($password);
+			$user->save();
+			return true;
 		}
 		return false;
 	}

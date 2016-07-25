@@ -12,6 +12,12 @@ class ContactRepository
 		return $contacts;
 	}
 
+	public function admin_contact()
+	{
+		$contacts = Contact::get();
+		return $contacts;
+	}
+
 	public function save_contact($input)
 	{
 		$contact = new Contact();
