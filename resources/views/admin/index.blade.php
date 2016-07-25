@@ -7,28 +7,29 @@
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     
     <!-- bootstrap 3.0.2 -->
-    <link href="asset/admin/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/admin/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <!-- font Awesome -->
-    <link href="asset/admin/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/admin/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <!-- Ionicons -->
-    <link href="asset/admin/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/admin/css/ionicons.min.css" rel="stylesheet" type="text/css" />
     <!-- Morris chart -->
-    <link href="asset/admin/css/morris/morris.css" rel="stylesheet" type="text/css" />
+    <link href="assets/admin/css/morris/morris.css" rel="stylesheet" type="text/css" />
     <!-- jvectormap -->
-    <link href="asset/admin/css/jvectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
+    <link href="assets/admin/css/jvectormap/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css" />
     <!-- Date Picker -->
-    <link href="asset/admin/css/datepicker/datepicker3.css" rel="stylesheet" type="text/css" />
+    <link href="assets/admin/css/datepicker/datepicker3.css" rel="stylesheet" type="text/css" />
     <!-- fullCalendar -->
     <!-- <link href="css/fullcalendar/fullcalendar.css" rel="stylesheet" type="text/css" /> -->
     <!-- Daterange picker -->
-    <link href="asset/admin/css/daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css" />
+    <link href="assets/admin/css/daterangepicker/daterangepicker-bs3.css" rel="stylesheet" type="text/css" />
     <!-- iCheck for checkboxes and radio inputs -->
-    <link href="asset/admin/css/iCheck/all.css" rel="stylesheet" type="text/css" />
+    <link href="assets/admin/css/iCheck/all.css" rel="stylesheet" type="text/css" />
     <!-- bootstrap wysihtml5 - text editor -->
     <!-- <link href="css/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" rel="stylesheet" type="text/css" /> -->
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <!-- Theme style -->
-    <link href="asset/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="assets/admin/css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="assets/admin/css/custom.css">
 
 
 
@@ -47,7 +48,7 @@
         <!-- header logo: style can be found in header.less -->
         <header class="header">
             <a href="index.html" class="logo">
-                Director
+                Admin
             </a>
             <!-- Header Navbar: style can be found in header.less -->
             <nav class="navbar navbar-static-top" role="navigation">
@@ -74,7 +75,7 @@
                                         <li><!-- start message -->
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/26115.jpg" class="img-circle" alt="User Image"/>
+                                                    <img src="assets/admin/img/26115.jpg" class="img-circle" alt="User Image"/>
                                                 </div>
                                                 <h4>
                                                     Support Team
@@ -86,7 +87,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/26115.jpg" class="img-circle" alt="user image"/>
+                                                    <img src="assets/admin/img/26115.jpg" class="img-circle" alt="user image"/>
                                                 </div>
                                                 <h4>
                                                     Director Design Team
@@ -99,7 +100,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar.png" class="img-circle" alt="user image"/>
+                                                    <img src="assets/admin/img/avatar.png" class="img-circle" alt="user image"/>
                                                 </div>
                                                 <h4>
                                                     Developers
@@ -112,7 +113,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/26115.jpg" class="img-circle" alt="user image"/>
+                                                    <img src="assets/admin/img/26115.jpg" class="img-circle" alt="user image"/>
                                                 </div>
                                                 <h4>
                                                     Sales Department
@@ -125,7 +126,7 @@
                                         <li>
                                             <a href="#">
                                                 <div class="pull-left">
-                                                    <img src="img/avatar.png" class="img-circle" alt="user image"/>
+                                                    <img src="assets/admin/img/avatar.png" class="img-circle" alt="user image"/>
                                                 </div>
                                                 <h4>
                                                     Reviewers
@@ -213,7 +214,7 @@
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="fa fa-user"></i>
-                                <span>Jane Doe <i class="caret"></i></span>
+                                <span>{{Auth::user()->name}} <i class="caret"></i></span>
                             </a>
                             <ul class="dropdown-menu dropdown-custom dropdown-menu-right">
                                 <li class="dropdown-header text-center">Account</li>
@@ -247,7 +248,7 @@
                                         <li class="divider"></li>
 
                                         <li>
-                                            <a href="#"><i class="fa fa-ban fa-fw pull-right"></i> Logout</a>
+                                            <a href="logout"><i class="fa fa-ban fa-fw pull-right"></i> Logout</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -263,10 +264,10 @@
                             <!-- Sidebar user panel -->
                             <div class="user-panel">
                                 <div class="pull-left image">
-                                    <img src="img/26115.jpg" class="img-circle" alt="User Image" />
+                                    <img src="assets/admin/img/26115.jpg" class="img-circle" alt="User Image" />
                                 </div>
                                 <div class="pull-left info">
-                                    <p>Hello, Jane</p>
+                                    <p>Hello, {{Auth::user()->name}}</p>
 
                                     <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                                 </div>
@@ -568,7 +569,7 @@
                     <ul class="media-list">
                         <li class="media">
                             <a href="#" class="pull-left">
-                                <img src="img/26115.jpg" alt="Avatar" class="img-circle" width="64" height="64">
+                                <img src="assets/admin/img/26115.jpg" alt="Avatar" class="img-circle" width="64" height="64">
                             </a>
                             <div class="media-body">
                                 <span class="text-muted pull-right">
@@ -587,7 +588,7 @@
                         </li>
                         <li class="media">
                             <a href="#" class="pull-left">
-                                <img src="img/26115.jpg" alt="Avatar" class="img-circle" width="64" height="64">
+                                <img src="assets/admin/img/26115.jpg" alt="Avatar" class="img-circle" width="64" height="64">
                             </a>
                             <div class="media-body">
                                 <span class="text-muted pull-right">
@@ -619,27 +620,27 @@
 
                                 <ul class="list-group teammates">
                                     <li class="list-group-item">
-                                        <a href=""><img src="img/26115.jpg" width="50" height="50"></a>
+                                        <a href=""><img src="assets/admin/img/26115.jpg" width="50" height="50"></a>
                                         <span class="pull-right label label-danger inline m-t-15">Admin</span>
                                         <a href="">Damon Parker</a>
                                     </li>
                                     <li class="list-group-item">
-                                        <a href=""><img src="img/26115.jpg"  width="50" height="50"></a>
+                                        <a href=""><img src="assets/admin/img/26115.jpg"  width="50" height="50"></a>
                                         <span class="pull-right label label-info inline m-t-15">Member</span>
                                         <a href="">Joe Waston</a>
                                     </li>
                                     <li class="list-group-item">
-                                        <a href=""><img src="img/26115.jpg"  width="50" height="50"></a>
+                                        <a href=""><img src="assets/admin/img/26115.jpg"  width="50" height="50"></a>
                                         <span class="pull-right label label-warning inline m-t-15">Editor</span>
                                         <a href="">Jannie Dvis</a>
                                     </li>
                                     <li class="list-group-item">
-                                        <a href=""><img src="img/26115.jpg"  width="50" height="50"></a>
+                                        <a href=""><img src="assets/admin/img/26115.jpg"  width="50" height="50"></a>
                                         <span class="pull-right label label-warning inline m-t-15">Editor</span>
                                         <a href="">Emma Welson</a>
                                     </li>
                                     <li class="list-group-item">
-                                        <a href=""><img src="img/26115.jpg"  width="50" height="50"></a>
+                                        <a href=""><img src="assets/admin/img/26115.jpg"  width="50" height="50"></a>
                                         <span class="pull-right label label-success inline m-t-15">Subscriber</span>
                                         <a href="">Emma Welson</a>
                                     </li>
@@ -793,31 +794,31 @@
 
         <!-- jQuery 2.0.2 -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
-        <script src="asset/admin/js/jquery.min.js" type="text/javascript"></script>
+        <script src="assets/admin/js/jquery.min.js" type="text/javascript"></script>
 
         <!-- jQuery UI 1.10.3 -->
-        <script src="asset/admin/js/jquery-ui-1.10.3.min.js" type="text/javascript"></script>
+        <script src="assets/admin/js/jquery-ui-1.10.3.min.js" type="text/javascript"></script>
         <!-- Bootstrap -->
-        <script src="asset/admin/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="assets/admin/js/bootstrap.min.js" type="text/javascript"></script>
         <!-- daterangepicker -->
-        <script src="asset/admin/js/plugins/daterangepicker/daterangepicker.js" type="text/javascript"></script>
+        <script src="assets/admin/js/plugins/daterangepicker/daterangepicker.js" type="text/javascript"></script>
 
-        <script src="asset/admin/js/plugins/chart.js" type="text/javascript"></script>
+        <script src="assets/admin/js/plugins/chart.js" type="text/javascript"></script>
 
         <!-- datepicker
         <script src="js/plugins/datepicker/bootstrap-datepicker.js" type="text/javascript"></script>-->
         <!-- Bootstrap WYSIHTML5
         <script src="js/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js" type="text/javascript"></script>-->
         <!-- iCheck -->
-        <script src="asset/admin/js/plugins/iCheck/icheck.min.js" type="text/javascript"></script>
+        <script src="assets/admin/js/plugins/iCheck/icheck.min.js" type="text/javascript"></script>
         <!-- calendar -->
-        <script src="asset/admin/js/plugins/fullcalendar/fullcalendar.js" type="text/javascript"></script>
+        <script src="assets/admin/js/plugins/fullcalendar/fullcalendar.js" type="text/javascript"></script>
 
         <!-- Director App -->
-        <script src="asset/admin/js/Director/app.js" type="text/javascript"></script>
+        <script src="assets/admin/js/Director/app.js" type="text/javascript"></script>
 
         <!-- Director dashboard demo (This is only for demo purposes) -->
-        <script src="asset/admin/js/Director/dashboard.js" type="text/javascript"></script>
+        <script src="assets/admin/js/Director/dashboard.js" type="text/javascript"></script>
 
         <!-- Director for demo purposes -->
         <script type="text/javascript">

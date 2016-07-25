@@ -9,5 +9,12 @@ use App\Http\Controllers\Controller;
 
 class DashboardController extends Controller
 {
-    //
+	public function __construct()
+	{
+		$this->middleware('admin');
+	}
+    public function get_index()
+    {
+    	return view('admin/index');
+    }
 }

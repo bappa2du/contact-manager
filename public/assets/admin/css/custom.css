@@ -1,0 +1,9 @@
+body > .header{
+	position: fixed;
+}
+.right-side{
+	margin-top: 50px;
+}
+.left-side{
+	position: fixed;
+}

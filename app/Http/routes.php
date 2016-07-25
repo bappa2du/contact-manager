@@ -24,7 +24,7 @@ Route::get('/', 'Web\HomeController@index');
 
 Route::get('admin',function(){
 	// dd(database_path());
-	User::create([
+	/*User::create([
 		'email'=>'admin@demo.com',
 		'name'=>'Super Admin',
 		'mobile'=>'8801670752212',
@@ -34,6 +34,6 @@ Route::get('admin',function(){
 	Role::create(['role_name'=>'admin']);
 	// dd(Role::get());
 	$user = User::where('email','admin@demo.com')->first();
-	$user->addRole('admin');
+	$user->addRole('admin');*/
 	return User::with('user_role.role')->get();
 });
