@@ -39,6 +39,7 @@
                                     <div class="12u$ 12u$(mobile)"><input type="password" name="password" placeholder="Password" /></div>
                                     <div class="12u$">
                                         <input type="submit" value="Login" />
+                                        <input type="button" value="New User" />
                                     </div>
                                 </div>
                             </form>
